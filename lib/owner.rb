@@ -3,12 +3,12 @@ class Owner
   attr_accessor
   attr_reader :name, :species
 
-  @@all = []
+  @@all_owners = []
 
   def initialize(name)
     @name = name
     @species = "human"
-    @@all << self
+    @@all_owners << self
   end
 
   def say_species
@@ -16,11 +16,11 @@ class Owner
   end
 
   def self.all
-    @@all
+    @@all_owners
   end
 
   def self.count
-    @@all.count
+    @@all_owners.count
   end
 
   def self.reset_all
