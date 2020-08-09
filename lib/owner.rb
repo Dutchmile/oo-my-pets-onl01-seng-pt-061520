@@ -27,4 +27,7 @@ class Owner
     @@all_owners.clear
   end
 
+  def self.cats
+    Cats.all_cats
+  end
 end
