@@ -45,4 +45,8 @@ class Owner
   def buy_dog(dog)
     dog = Dog.new(dog, self)
   end
+
+  def walk_dogs
+    Dog.all {|d| d.mood = happy if d.owner == self}
+  end
 end
