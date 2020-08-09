@@ -69,7 +69,7 @@ class Owner
         end
   end
 
-  def list.pets
+  def list_pets
     owners_pets = []
     Cat.all.select {|c| owners_pets << c if c.owner == self}
     Dog.all.select {|d| owners_pets << d if d.owner == self}
