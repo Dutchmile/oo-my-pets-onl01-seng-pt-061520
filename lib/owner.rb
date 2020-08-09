@@ -53,4 +53,13 @@ class Owner
   def feed_cats
     Cat.all.each {|c| c.mood = "happy" if c.owner == self}
   end
+
+  def sell_pets
+    Cat.all.each do |c|
+        if c.owner == self
+          c.owner = nil
+          c.mood = "nervous"
+        end
+      end
+    Dog.all.each {|d| d.delete if d.owner == self}
 end
