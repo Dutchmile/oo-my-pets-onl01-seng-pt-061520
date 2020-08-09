@@ -68,4 +68,11 @@ class Owner
           end
         end
   end
+
+  def list.pets
+    owners_pets = []
+    Cat.all.select {|c| owners_pets << c if c.owner == self}
+    Dog.all.select {|d| owners_pets << d if d.owner == self}
+    owners_pets
+  end
 end
