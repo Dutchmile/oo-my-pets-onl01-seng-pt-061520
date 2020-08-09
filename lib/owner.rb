@@ -27,7 +27,7 @@ class Owner
     @@all_owners.clear
   end
 
-  def self.cats
-    Cats.all_cats
+  def cats
+    Cats.all_cats collect {|c| c == self}
   end
 end
