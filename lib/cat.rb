@@ -15,4 +15,5 @@ class Cat
 
   def all
     @@all_cats
+  end
 end
