@@ -61,5 +61,11 @@ class Owner
           c.mood = "nervous"
         end
       end
-    Dog.all.each {|d| d.delete if d.owner == self}
+    Dog.all.each do |d|
+          if d.owner == self
+            d.owner = nil
+            d.mood = "nervous"
+          end
+        end
+  end
 end
